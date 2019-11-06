@@ -2,7 +2,27 @@ body{
   font-family: Arial, sans-serif;
   font-size: 16px;
   background-color: #FFFFFA;
+  height: 100%;
 }
+
+html{
+  height: 100%
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('../images/pumpkinpancakes.jpg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 h1{
   font-stretch: expanded;
@@ -13,15 +33,74 @@ h1{
   padding: 10px 0 5px 0;
 }
 
+h1 span {
+   padding: 10px;
+   position: absolute;
+   left: 0;
+   top: 550px;
+   text-align: left;
+   background-color: #FFFFFA;
+}
+
 p{
   font-size: .9em;
+  line-height: 1.5;
 }
 
 h2{
   text-transform: uppercase;
-  color: #6A8EAE;
+  color: #3A606E;
   text-align: center;
-  padding: 30px 0 5px 0;
+}
+
+input:focus{
+	background-color:lightgrey;
+}
+
+form{
+  display: grid;
+  grid-row: 4;
+  grid-column: 2;
+}
+
+fieldset{
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border: 2px groove black;
+}
+
+form input[type=text] {
+  width: 200px;
+  /* box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; */
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+form input[type=email] {
+  width: 200px;
+  /* box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; */
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+form input[type=text]:focus {
+  width: 100%;
+}
+
+form input[type=email]:focus {
+  width: 100%;
 }
 
 .skip a{
@@ -54,6 +133,7 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 nav ul{
@@ -83,20 +163,16 @@ nav a:hover{
 }
 
 footer{
-  /* display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr; */
   background-color: #3A606E;
   margin: 15px -30px -100px;
   padding: 20px 40px;
   bottom: 0;
 }
 
-/* footer p{
+footer p{
   color: white;
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
-} */
+  text-align: center;
+}
 
 *:focus{
   border: 2px solid black;
@@ -126,15 +202,24 @@ footer{
   justify-self: center;
 }
 
+.breakfast-madison-text a{
+  text-decoration: none;
+}
+
 .mexican-annarbor-image{
   grid-column: 1 / span 1;
   grid-row: 3;
+  overflow: hidden;
 }
 
 .mexican-annarbor-text{
   grid-column: 1 / span 1;
   grid-row: 4;
   justify-self: center;
+}
+
+.mexican-annarbor-text a{
+  text-decoration: none;
 }
 
 .recipe-image{
@@ -146,6 +231,10 @@ footer{
   grid-column: 1 / span 1;
   grid-row: 6;
   justify-self: center;
+}
+
+.recipe-text a{
+  text-decoration: none;
 }
 
 .travel-container{
@@ -178,7 +267,7 @@ footer{
 .muffin-container{
   display: grid;
   grid-template-columns: 20px auto 20px;
-  grid-template-rows: .2fr .2fr 1fr 2fr;
+  grid-template-rows: .1fr .1fr .1fr 1fr;
   row-gap: 20px;
   justify-content: center;
 }
@@ -200,6 +289,7 @@ footer{
 .muffin-description{
   grid-column: 2 / span 1;
   grid-row: 2;
+  margin: 0 50px;
 }
 
 .muffin-image{
@@ -253,11 +343,6 @@ footer{
    grid-row: 3 / span 1;
    grid-column: 2;
    margin: 10px;
- }
-
- .form{
-   grid-row: 4 / span 1;
-   grid-column: 2;
  }
 
 .mexican-annarbor-container{
@@ -373,24 +458,40 @@ footer{
 
 @media screen and (min-width: 800px){
 
+header{
+  font-stretch: expanded;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #3A606E;
+  font-size: 1.7em;
+  margin: 20px;
+  display: inline-block;
+
+}
+
+
 h1{
   font-stretch: expanded;
   font-weight: bolder;
   text-transform: uppercase;
   color: #3A606E;
-  margin-left: 30px;
+  text-align: center;
   font-size: 24px;
+  margin-bottom: 20px;
 }
 
 h2{
   text-transform: uppercase;
   color: black;
   margin-left: 30px;
-  color: #6A8EAE;
+  color: #3A606E;
 }
 
-.nav-bar{
-  display: block;
+nav{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin-top: 35px;
 }
 
 nav ul{
@@ -406,44 +507,45 @@ nav li{
 
 .main{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 100px 1fr 1fr 1fr 100px;
+  grid-template-rows: 1fr .2fr;
   column-gap: 45px;
   row-gap: 30px;
   width: 100%;
 }
 
 .main img{
-   width: 50%;
+  padding-top: 30px;
+   width: 100%;
  }
 
 .breakfast-madison-image{
-  grid-column: 1 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 1;
 }
 
 .breakfast-madison-text{
-  grid-column: 1 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 2;
 }
 
 .mexican-annarbor-image{
-  grid-column: 2 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 1;
 }
 
 .mexican-annarbor-text{
-  grid-column: 2 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 2;
 }
 
 .recipe-image{
-  grid-column: 3 / span 1;
+  grid-column: 4 / span 1;
   grid-row: 1;
 }
 
 .recipe-text{
-  grid-column: 3 / span 1;
+  grid-column: 4 / span 1;
   grid-row: 2;
 }
 
@@ -463,18 +565,13 @@ nav li{
  .about-me-page{
    display: grid;
    grid-template-columns: 150px auto auto 150px;
-   grid-template-rows: 100px auto 30px;
-   column-gap: 45px;
+   grid-template-rows: auto auto;
+   column-gap: 10px;
    row-gap: 30px;
  }
 
- .about-me-header{
-   grid-row: 1 / span 1;
-   grid-column: 1 / span 2;
- }
-
  .about-me-image{
-   grid-row: 2 / span 1;
+   grid-row: 1;
    grid-column: 2 / span 1;
  }
 
@@ -484,8 +581,66 @@ nav li{
  }
 
  .about-me-text{
-   grid-row: 2 / span 1;
+   grid-row: 1;
    grid-column: 3 / span 1;
+   align-self: center;
+ }
+
+ .h2-about{
+   color: black;
+   text-align: left;
+   margin-left: 0;
+   text-transform: none;
+ }
+
+ .muffin-image{
+   grid-column: 2 / span 1;
+   grid-row: 3;
+   align-self: center;
+   margin: 0 180px;
+ }
+
+ .travel-container{
+   display: grid;
+   grid-template-columns: 200px auto auto 200px;
+   grid-template-rows: 1fr;
+   column-gap: 30px;
+   justify-content: center;
+ }
+
+ .travel-container img{
+    width: 100%;
+    height: 100%;
+ }
+
+ .travel-container p{
+    text-align: center;
+ }
+
+ .mexican-ann-arbor{
+   grid-column: 2;
+   grid-row: 1;
+ }
+
+ .mexican-ann-arbor img{
+   width: 100%
+   height:80%
+   overflow: hidden;
+ }
+
+ .breakfast-madison{
+   grid-column: 3;
+   grid-row: 1;
+ }
+
+form{
+   grid-row: 2;
+   grid-column: 2 / span 2;
  }
 
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
