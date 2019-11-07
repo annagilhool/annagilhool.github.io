@@ -9,21 +9,6 @@ html{
   height: 100%
 }
 
-.parallax {
-  display: grid;
-  grid-row: 3;
-  grid-column: 2;
-
-  background-image: url('../images/muffinpan.jpg');
-
-  height: 100%;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 
 h1{
   font-stretch: expanded;
@@ -513,7 +498,28 @@ footer p{
      grid-column: 2 / span 1;
      grid-row: 4;
    }
+
+   .muffin-image{
+     display:none;
+   }
+
+   .parallax {
+     display: grid;
+     grid-row: 3;
+     grid-column: 2;
+
+     background-image: url('../images/muffinpan.jpg');
+
+     height: 100%;
+
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
 }
+
+
 
 
 @media screen and (min-width: 1000px){
@@ -662,12 +668,10 @@ nav li{
    text-transform: none;
  }
 
- .muffin-image{
-   grid-column: 2 / span 1;
-   grid-row: 3;
-   align-self: center;
-   margin: 0 180px;
- }
+
+.muffin-image{
+     display:none;
+   }
 
  .travel-container{
    display: grid;
