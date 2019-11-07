@@ -21,6 +21,7 @@
         </ul>
       </nav>
     </div>
+  <main>
 	<h1>About Me</h1>
 	<div class="about-me-page">
 		<div class="about-me-image">
@@ -34,17 +35,14 @@
 		<form action="https://formspree.io/annakgil@umich.edu" method = "post" class="form">
 			<fieldset>
 				<legend>Contact Me!</legend><br/>
-				<label for="name">Name:</label>
-				<input type="text" id = "name" value="Name"><br/>
-				<label> Email:
-					<input type="email" value = "email@umich.edu">
-				</label><br/>
-				<label for="text">Message:</label>
-				<input type="text" id = "message"><br>
-				<input type = "submit" value = "Send!">
+				<label for="name">Name:<input type="text" id = "name" value="Name" aria-label="Name"></label><br/>
+				<label>Email: <input type="email" value = "email@umich.edu" aria-label="Email"></label><br/>
+				<label for="text">Message: <input type="text" id = "text"></label><br>
+				<input type = "submit" value = "Send!" aria-label="Submit">
 			</fieldset>
 		</form>
 	</div>
+  </main>
 	<footer>
 		<p>Anna Gilhool<br/>
 			annakgil@umich.edu</p>
