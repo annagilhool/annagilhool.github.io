@@ -6,6 +6,7 @@ body{
 }
 
 html{
+  psoition: relative;
   height: 100%
 }
 
@@ -109,6 +110,7 @@ header{
   font-size: 1.7em;
   text-align: center;
   padding: 10px 0 10px 0;
+  text-shadow: -3px 3px 4px burlywood;
 }
 
 .nav-bar{
@@ -150,6 +152,10 @@ footer{
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.gallery-footer{
+  position: relative;
 }
 
 footer p{
@@ -361,7 +367,7 @@ footer p{
 .mexican-annarbor-heading{
   grid-column: 2;
   grid-row: 1;
-  text-aligin: center;
+  justify-self: center;
 }
 
 .chelas-image{
@@ -407,13 +413,8 @@ footer p{
 .breakfast-madison-heading{
   grid-column: 2;
   grid-row: 1;
-  text-aligin: center;
+  justify-self: center;
 }
-
-.breakfast-madison-heading p{
-  text-aligin: center;
-}
-
 
 .shortstack-image{
   grid-column: 2;
@@ -585,14 +586,18 @@ nav li{
    width: 100%;
  }
 
-.index-footer{
-   background-color: #3A606E;
-   margin: 15px -30px -100px;
-   padding: 20px 40px;
-   position: absolute;
-   bottom: 0;
-   width: 100%;
- }
+/* footer{
+  position: absolute;
+  bottom: 0;
+} */
+
+.footer-mexican{
+  position: relative;
+}
+
+.footer-breakfast{
+  position: relative;
+}
 
 .breakfast-madison-image{
   grid-column: 2 / span 1;
