@@ -6,10 +6,8 @@ body{
 }
 
 html{
-  psoition: relative;
   height: 100%
 }
-
 
 h1{
   font-stretch: expanded;
@@ -18,15 +16,6 @@ h1{
   color: #3A606E;
   text-align: center;
   padding: 10px 0 5px 0;
-}
-
-h1 span {
-   padding: 10px;
-   position: absolute;
-   left: 0;
-   top: 550px;
-   text-align: left;
-   background-color: #FFFFFA;
 }
 
 p{
@@ -40,9 +29,6 @@ h2{
   text-align: center;
 }
 
-input:focus{
-	background-color:lightgrey;
-}
 
 form{
   display: grid;
@@ -76,6 +62,10 @@ form input[type=email] {
   margin: 4px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+}
+
+input:focus{
+	background-color:lightgrey;
 }
 
 form input[type=text]:focus {
@@ -154,9 +144,6 @@ footer{
   width: 100%;
 }
 
-.gallery-footer{
-  position: relative;
-}
 
 footer p{
   color: white;
@@ -314,14 +301,6 @@ footer p{
    transform: rotateY(180deg);
  }
 
- .gallery img:focus{
-   transition: all 0.6s ease;
- }
-
- .gallery img:focus{
-   transform: rotateY(180deg);
- }
-
  .about-me-page{
    display: grid;
    grid-template-columns: 20px auto 20px;
@@ -456,72 +435,67 @@ footer p{
 }
 
 @media screen and (min-width: 750px){
-  .main{
-    display: grid;
-    grid-template-columns: 100px 1fr 1fr 100px;
-    grid-template-rows: 1fr .2fr 1fr .2fr;
-    column-gap: 45px;
-    row-gap: 5px;
-    width: 100%;
-  }
-
-  .main img{
-    padding-top: 30px;
-     width: 100%;
-   }
-
-   .breakfast-madison-image{
-     grid-column: 2 / span 1;
-     grid-row: 1;
-   }
-
-   .breakfast-madison-text{
-     grid-column: 2 / span 1;
-     grid-row: 2;
-   }
-
-   .mexican-annarbor-image{
-     grid-column: 3 / span 1;
-     grid-row: 1;
-   }
-
-   .mexican-annarbor-text{
-     grid-column: 3 / span 1;
-     grid-row: 2;
-   }
-
-   .recipe-image{
-     grid-column: 2 / span 1;
-     grid-row: 3;
-   }
-
-   .recipe-text{
-     grid-column: 2 / span 1;
-     grid-row: 4;
-   }
-
-   .muffin-image{
-     display:none;
-   }
-
-   .parallax {
-     display: grid;
-     grid-row: 3;
-     grid-column: 2;
-
-     background-image: url('../images/muffinpan.jpg');
-
-     height: 100%;
-
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-   }
+.main{
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: 1fr .2fr 1fr .2fr;
+  column-gap: 45px;
+  row-gap: 5px;
+  width: 100%;
 }
 
+.main img{
+  padding-top: 30px;
+}
 
+.breakfast-madison-image{
+  grid-column: 2 / span 1;
+  grid-row: 1;
+}
 
+.breakfast-madison-text{
+  grid-column: 2 / span 1;
+  grid-row: 2;
+}
+
+.mexican-annarbor-image{
+  grid-column: 3 / span 1;
+  grid-row: 1;
+}
+
+.mexican-annarbor-text{
+  grid-column: 3 / span 1;
+  grid-row: 2;
+}
+
+.recipe-image{
+  grid-column: 2 / span 1;
+  grid-row: 3;
+}
+
+.recipe-text{
+  grid-column: 2 / span 1;
+  grid-row: 4;
+}
+
+.muffin-image{
+  display:none;
+}
+
+.parallax{
+  display: grid;
+  grid-row: 3;
+  grid-column: 2;
+
+  background-image: url('../images/muffinpan.jpg');
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
 
 @media screen and (min-width: 1000px){
 
@@ -533,25 +507,16 @@ header{
   font-size: 1.7em;
   margin: 20px;
   display: inline-block;
-
 }
 
 
 h1{
-  font-stretch: expanded;
-  font-weight: bolder;
-  text-transform: uppercase;
-  color: #3A606E;
-  text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 h2{
-  text-transform: uppercase;
-  color: black;
   margin-left: 30px;
-  color: #3A606E;
 }
 
 nav{
@@ -561,19 +526,11 @@ nav{
   margin-top: 35px;
 }
 
-nav ul{
-  list-style-type: none;
-  text-align: end;
-}
-
 nav li{
-  display: inline-block;
   padding-right: 20px;
-  text-transform: lowercase;
 }
 
 .main{
-  display: grid;
   grid-template-columns: 100px 1fr 1fr 1fr 100px;
   grid-template-rows: 1fr .2fr;
   column-gap: 45px;
@@ -583,21 +540,7 @@ nav li{
 
 .main img{
   padding-top: 30px;
-   width: 100%;
  }
-
-/* footer{
-  position: absolute;
-  bottom: 0;
-} */
-
-.footer-mexican{
-  position: relative;
-}
-
-.footer-breakfast{
-  position: relative;
-}
 
 .breakfast-madison-image{
   grid-column: 2 / span 1;
@@ -629,21 +572,12 @@ nav li{
   grid-row: 2;
 }
 
-.gallery{
-   display: flex;
-   flex-wrap: wrap;
-   align-items: flex-start;
-   justify-content: center;
-   min-height: 500px;
- }
 
 .gallery > img{
-   margin: 10px;
    width: 300px;
  }
 
  .about-me-page{
-   display: grid;
    grid-template-columns: 150px auto auto 150px;
    grid-template-rows: auto auto;
    column-gap: 10px;
@@ -679,7 +613,6 @@ nav li{
    }
 
  .travel-container{
-   display: grid;
    grid-template-columns: 100px auto auto 100px;
    grid-template-rows: auto;
    column-gap: 30px;
@@ -722,3 +655,4 @@ form{
   html{
       scroll-behavior: auto;
   }
+}
