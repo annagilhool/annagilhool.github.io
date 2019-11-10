@@ -500,15 +500,9 @@ footer p{
 @media screen and (min-width: 1000px){
 
 header{
-  font-stretch: expanded;
-  font-weight: bolder;
-  text-transform: uppercase;
-  color: #3A606E;
-  font-size: 1.7em;
   margin: 20px;
   display: inline-block;
 }
-
 
 h1{
   font-size: 24px;
